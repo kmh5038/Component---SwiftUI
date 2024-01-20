@@ -52,6 +52,20 @@ struct CardView: View {
                         .scaledToFit()
                 }
                 // MARK: - FOOTER
+                Button {
+                   print("The button was pressed.")
+                } label: {
+                    Text("Explore More")
+                        
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundStyle(LinearGradient(colors: [.customGreenLight, .customGreenMedium], startPoint: .top, endPoint: .bottom))
+                }
+                .padding(.vertical, 10)
+                .padding(.horizontal, 30)
+                .background(LinearGradient(colors: [.customGrayLight, .customGrayMedium], startPoint: .top, endPoint: .bottom))
+                .clipShape(.rect(cornerRadius: 40))
+                
             } //: VSTACK
         } //: CARD
         .frame(width: 320, height: 570)
